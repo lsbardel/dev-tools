@@ -108,27 +108,33 @@ Submodules
 
 To add links to other git projects you can use the ``submodule`` command::
 
-    git submodule add git@github.com:lsbardel/py2py3.git libs/py2py3
+    git submodule add git@github.com:lsbardel/plugin.git libs/plugin
 
 make sure you add the ``.gitmodules`` to your repo::
 
     git add .gitmodules
     
 When you add the submodule, the most recent commit of the submodule
-is stored in the main repository’s index. That means that as the code
-in the submodule’s repository updates, the code in your repo won't.
+is stored in the main repository's index. That means that as the code
+in the submodule's repository updates, the code in your repo won't.
+This is not like the default behaviour of ``svn:externals`` where it will track the latest
+revision at the time.
 
-To update your submodule is not as simple and you would expect. First you move
-into the submodule directory and issue a::
+To update your submodule is do it as it was e suparate repository, which in fact it is.
+You move to the submodule location ``libs/plugin`` ::
 
-    git pull
+    git remote update
     
-Or a ``git fetch`` followed by a ``merge``.
-Than move back to your repo root directory and issue an add command::
-
-    git add libs/py2py3
+    git merge origin/master
     
-not a ``submodule add`` command. Commit and you are done.
+Commit and you are done.
+
+When you clone a repository with submodules you need to issue the following two commands once
+your clone is ready::
+
+    git submodule init
+    git submodule update
+    
 
 
     
