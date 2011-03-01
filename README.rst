@@ -102,3 +102,33 @@ To check the differences in unmerged file ``whatever.h`` type::
 
 	git diff whatever.h
 	
+
+Submodules
+=================
+
+To add links to other git projects you can use the ``submodule`` command::
+
+    git submodule add git@github.com:lsbardel/py2py3.git libs/py2py3
+
+make sure you add the ``.gitmodules`` to your repo::
+
+    git add .gitmodules
+    
+When you add the submodule, the most recent commit of the submodule
+is stored in the main repository’s index. That means that as the code
+in the submodule’s repository updates, the code in your repo won't.
+
+To update your submodule is not as simple and you would expect. First you move
+into the submodule directory and issue a::
+
+    git pull
+    
+Or a ``git fetch`` followed by a ``merge``.
+Than move back to your repo root directory and issue an add command::
+
+    git add libs/py2py3
+    
+not a ``submodule add`` command. Commit and you are done.
+
+
+    
