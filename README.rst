@@ -45,6 +45,30 @@ Branches
     
   where ``<remote>`` is usually ``origin``.
 
+Renaming your master (or any other) branch can be useful sometimes. First on
+your local repo::
+
+    git branch -m master old-master
+    git branch -m mybranch master
+    
+Now, time to mess with the remote. Just in case you screw up, you might want to make
+sure you have a current backup. First, delete the remote's master::
+
+    git push origin :master
+    
+And now, give the remote your new master::
+
+    git push origin master:refs/heads/master
+   
+and your now-renamed old master:
+
+    git push origin old-master:refs/heads/old-master
+    
+Finally, delete the old name of your maintenance branch to prevent confusion::
+
+    git push origin :mybranch
+
+
 Rebase
 ==============
 
