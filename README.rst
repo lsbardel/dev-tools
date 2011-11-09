@@ -9,8 +9,6 @@ Useful external links::
 
 * `Kernel Hackers' Guide to git`__.
 
-__ KH_
-
 .. contents::
     :local:
 
@@ -200,4 +198,5 @@ your clone is ready::
 
 
 .. _KH:  http://linux.yyz.us/git-howto.html
-    
+
+__ KH_
