@@ -1,22 +1,29 @@
-
 =======================
 Git Notepad
 =======================
 
 An easy way to keep notes on git usage.
 
-Useful external links::
-
-* `Kernel Hackers' Guide to git`__.
+**Contents**
 
 .. contents::
     :local:
 
 
+Intro
+============
+
+Useful external links
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `Kernel Hackers' Guide to git <http://linux.yyz.us/git-howto.html>`_.
+
+
 Remainders
-===============
+~~~~~~~~~~~~~~~~
 
 * Never, ever duplicate a name, lets say a branch and a tag with the same name.
+
 
 Pulling & fetching
 =======================
@@ -196,7 +203,3 @@ your clone is ready::
     git submodule update
     
 
-
-.. _KH:  http://linux.yyz.us/git-howto.html
-
-__ KH_
