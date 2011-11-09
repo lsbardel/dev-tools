@@ -56,6 +56,11 @@ Tag are static, a snapshot of a repository at a given commit.
 Branches
 ===============
 
+* To check out a local working branch based on a remote branch ``origin/test``
+  you need to check it out with
+
+    git checkout -b test origin/test
+    
 * To delete a branch::
 
     git branch -d mybranch
