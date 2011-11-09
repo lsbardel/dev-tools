@@ -5,6 +5,12 @@ Git Notepad
 
 An easy way to keep notes on git usage.
 
+Useful external links::
+
+* `Kernel Hackers' Guide to git`__.
+
+__ KH_
+
 .. contents::
     :local:
 
@@ -56,8 +62,14 @@ Tag are static, a snapshot of a repository at a given commit.
 Branches
 ===============
 
-* To check out a local working branch based on a remote branch ``origin/test``
-  you need to check it out with
+* To check out a local working branch::
+
+    git checkout -b test
+    
+  This method will copy the current branch to the ``test``.
+  
+ * To check out a local working branch based on a remote branch ``origin/test``
+   you need to check it out with::
 
     git checkout -b test origin/test
     
@@ -187,4 +199,5 @@ your clone is ready::
     
 
 
+.. _KH:  http://linux.yyz.us/git-howto.html
     
