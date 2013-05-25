@@ -73,8 +73,8 @@ Branches
     
   This method will copy the current branch to the ``test``.
   
- * To check out a local working branch based on a remote branch ``origin/test``
-   you need to check it out with::
+* To check out a local working branch based on a remote branch ``origin/test``
+  you need to check it out with::
 
     git checkout -b test origin/test
     
@@ -82,7 +82,7 @@ Branches
 
     git branch -d mybranch
     
-* To delete a branch in a ``remote`` repository
+* To delete a branch in a ``remote`` repository::
 
     git push <remote> :mybranch
     
