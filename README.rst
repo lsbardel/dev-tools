@@ -1,18 +1,29 @@
-
 =======================
 Git Notepad
 =======================
 
 An easy way to keep notes on git usage.
 
+**Contents**
+
 .. contents::
     :local:
 
 
+Intro
+============
+
+Useful external links
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* `Kernel Hackers' Guide to git <http://linux.yyz.us/git-howto.html>`_.
+
+
 Remainders
-===============
+~~~~~~~~~~~~~~~~
 
 * Never, ever duplicate a name, lets say a branch and a tag with the same name.
+
 
 Pulling & fetching
 =======================
@@ -56,6 +67,17 @@ Tag are static, a snapshot of a repository at a given commit.
 Branches
 ===============
 
+* To check out a local working branch::
+
+    git checkout -b test
+    
+  This method will copy the current branch to the ``test``.
+  
+ * To check out a local working branch based on a remote branch ``origin/test``
+   you need to check it out with::
+
+    git checkout -b test origin/test
+    
 * To delete a branch::
 
     git branch -d mybranch
@@ -219,5 +241,3 @@ your clone is ready::
     git submodule update
     
 
-
-    
