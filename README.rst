@@ -66,12 +66,30 @@ Branches
     
   where ``<remote>`` is usually ``origin``.
 
-Renaming your master (or any other) branch can be useful sometimes. First on
-your local repo::
+Renaming a branch
+~~~~~~~~~~~~~~~~~~~~~
+Best way in my opinion is to use ``ours`` merge strategy to overwrite branch `a`
+with branch `b`:
+
+git checkout b
+git merge -s ours a
+git checkout a
+git merge b
+
+The result should be your branch ``a`` is now essentially branch ``b``.
+
+Renaming again
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Another, more convoluted, way to rename, on your local repo::
 
     git branch -m master old-master
+    
+move the ``master`` branch to a local new name ``old-branch``. Then
+
     git branch -m mybranch master
     
+move mybranch to master name.
+
 Now, time to mess with the remote. Just in case you screw up, you might want to make
 sure you have a current backup. First, delete the remote's master::
 
@@ -90,6 +108,26 @@ Finally, delete the old name of your maintenance branch to prevent confusion::
     git push origin :mybranch
 
 
+Compare branches
+~~~~~~~~~~~~~~~~~~~
+
+To identify the files which are different between two branches::
+
+    git diff --name-status master..mybranch
+    
+which is similar to::
+
+    git diff --name-only master..mybranch
+    
+but the best is::
+
+    git diff --stat --color master..mybranch
+    
+And to check the actual differences in a file::
+
+    git diff mybranch master -- myfile.cs
+    
+    
 Rebase
 ==============
 
