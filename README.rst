@@ -90,23 +90,31 @@ Branches
 
 Renaming a branch
 ~~~~~~~~~~~~~~~~~~~~~
-Best way in my opinion is to use ``ours`` merge strategy to overwrite branch `a`
-with branch `b`:
+The best way in my opinion is to use ``ours`` merge strategy to overwrite
+branch `a` with branch `b`::
 
-git checkout b
-git merge -s ours a
-git checkout a
-git merge b
+    git checkout b
+    git merge -s ours a
+    git checkout a
+    git merge b
 
 The result should be your branch ``a`` is now essentially branch ``b``.
 
+
+Delteting a branch
+~~~~~~~~~~~~~~~~~~~~~~~~~
+To delete a branch ``mybranch`` in a ``remote`` repository::
+
+    git push origin :mybranch
+    
+     
 Renaming again
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Another, more convoluted, way to rename, on your local repo::
 
     git branch -m master old-master
     
-move the ``master`` branch to a local new name ``old-branch``. Then
+move the ``master`` branch to a local new name ``old-branch``. Then::
 
     git branch -m mybranch master
     
@@ -121,7 +129,7 @@ And now, give the remote your new master::
 
     git push origin master:refs/heads/master
    
-and your now-renamed old master:
+and your now-renamed old master::
 
     git push origin old-master:refs/heads/old-master
     
