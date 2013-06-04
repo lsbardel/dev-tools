@@ -197,7 +197,7 @@ When ready, lets ``rebase`` to the upstream master::
 	git rebase upstream/master
 	
 If there are no conflicts you are ready to commit, otherwise deal with them as
-explained in dealing with conflicts.
+explained in dealing with conflicts::
 
 	git rebase --continue
 
