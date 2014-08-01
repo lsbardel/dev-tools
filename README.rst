@@ -88,6 +88,14 @@ Branches
     
   where ``<remote>`` is usually ``origin``.
 
+Merging
+~~~~~~~~~~~
+
+To merge and prefer the version of the ``branch`` being merged::
+
+    git merge branch -X theirs    
+
+    
 Renaming a branch
 ~~~~~~~~~~~~~~~~~~~~~
 The best way in my opinion is to use ``ours`` merge strategy to overwrite
