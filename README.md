@@ -1,16 +1,40 @@
-# Intro
+# Git Notes
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-## Useful external links
+- [Intro](#intro)
+  - [Useful external links](#useful-external-links)
+  - [Remainders](#remainders)
+- [Pulling & fetching](#pulling-&-fetching)
+  - [Pulling into a dirty tree](#pulling-into-a-dirty-tree)
+- [Tags](#tags)
+- [Branches](#branches)
+  - [Merging branches](#merging-branches)
+  - [Renaming a branch](#renaming-a-branch)
+  - [Deleting a branch](#deleting-a-branch)
+  - [Renaming again](#renaming-again)
+  - [Compare branches](#compare-branches)
+  - [Rebase](#rebase)
+- [Dealing with Remotes](#dealing-with-remotes)
+  - [Dealing with Conflicts](#dealing-with-conflicts)
+- [Submodules](#submodules)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Intro
+
+### Useful external links
 
 * [Kernel Hackers' Guide to git](http://linux.yyz.us/git-howto.html)
 
-## Remainders
+### Remainders
 
 * Never, ever duplicate a name, lets say a branch and a tag with the same name.
 
-# Pulling & fetching
+## Pulling & fetching
 
-## Pulling into a dirty tree
+### Pulling into a dirty tree
 
 When you are in the middle of something, you learn that there are upstream changes
 that are possibly relevant to what you are doing. When your local changes do not conflict with the changes
@@ -29,7 +53,7 @@ perform a pull, and then ``unstash``, like this:
 ```
 
 
-# Tags
+## Tags
 
 Tag are static, a snapshot of a repository at a given commit.
 
@@ -45,7 +69,7 @@ Tag are static, a snapshot of a repository at a given commit.
 ```
   where ``<remote>`` is usually ``origin``.
 
-# Branches
+## Branches
 
 * To check out a local working branch:
 ```
@@ -67,14 +91,14 @@ Tag are static, a snapshot of a repository at a given commit.
 ```    
   where ``<remote>`` is usually ``origin``.
 
-## Merging
+### Merging branches
 
 To merge and prefer the version of the ``branch`` being merged:
 ```
     git merge branch -X theirs    
 ```
 
-## Renaming a branch
+### Renaming a branch
 
 The best way in my opinion is to use ``ours`` merge strategy to overwrite
 branch `a` with branch `b`:
@@ -87,14 +111,14 @@ branch `a` with branch `b`:
 The result should be your branch ``a`` is now essentially branch ``b``.
 
 
-## Deleting a branch
+### Deleting a branch
 
 To delete a branch ``mybranch`` in a ``remote`` repository:
 ```
     git push origin :mybranch
 ```    
 
-## Renaming again
+### Renaming again
 
 Another, more convoluted, way to rename, on your local repo:
 ```
@@ -124,7 +148,7 @@ Finally, delete the old name of your maintenance branch to prevent confusion:
     git push origin :mybranch
 ```
 
-## Compare branches
+### Compare branches
 
 To identify the files which are different between two branches:
 ```
@@ -143,14 +167,14 @@ And to check the actual differences in a file:
     git diff mybranch master -- myfile.cs
 ```    
 
-## Rebase
+### Rebase
 
 To see the list of recents commits:
 ```
     git show-branch mybranch --more=4
 ```
 
-# Dealing with Remotes
+## Dealing with Remotes
 
 **Aka: maintaining your own branch of a shared project.**
 
@@ -185,7 +209,7 @@ explained in dealing with conflicts:
 	git rebase --continue
 ```
 
-# Dealing with Conflicts
+### Dealing with Conflicts
 
 Useful commands:
 ```
@@ -198,7 +222,7 @@ To check the differences in un-merged file ``whatever.h`` type:
 	git diff whatever.h
 ```
 
-# Submodules
+## Submodules
 
 To add links to other git projects you can use the ``submodule`` command:
 ```
