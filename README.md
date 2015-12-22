@@ -12,6 +12,7 @@
 - [Branches](#branches)
   - [Merging branches](#merging-branches)
   - [Renaming a branch](#renaming-a-branch)
+  - [View and discard changes](#view-and-discard-changes)
   - [Deleting a branch](#deleting-a-branch)
   - [Renaming again](#renaming-again)
   - [Compare branches](#compare-branches)
@@ -110,6 +111,18 @@ branch `a` with branch `b`:
 ```
 The result should be your branch ``a`` is now essentially branch ``b``.
 
+### View and discard changes
+
+Sometimes you make local changes and commit them without pushing to remote.
+To see the history of these local commits and the differences:
+```
+git log origin/master..HEAD
+git diff origin/master..HEAD
+```
+And sometimes you would like to discard these local commits:
+```
+git reset --hard origin/master
+```
 
 ### Deleting a branch
 
