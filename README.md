@@ -53,7 +53,18 @@ perform a pull, and then ``unstash``, like this:
     $ git stash pop
 ```
 
+### Clean up
 
+Use ``git clean`` to remove untracked files/directories. By default, it will only print what it would have removed, without actually removing them.
+
+Given the -f flag to remove the files, and the -d flag to remove empty directories as well :
+```
+git clean -df
+```
+Also removing ignored files:
+```
+git clean -dfx
+```
 ## Tags
 
 Tag are static, a snapshot of a repository at a given commit.
