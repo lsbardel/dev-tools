@@ -8,6 +8,7 @@
   - [Remainders](#remainders)
 - [Pulling & fetching](#pulling-&-fetching)
   - [Pulling into a dirty tree](#pulling-into-a-dirty-tree)
+  - [Clean up](#clean-up)
 - [Tags](#tags)
 - [Branches](#branches)
   - [Merging branches](#merging-branches)
