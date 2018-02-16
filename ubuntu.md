@@ -1,9 +1,8 @@
 Setup for my ubuntu machine, a razer balde stealth.
 
-## Ubuntu setup
+## Extensions
 
 * [razer-blade-stealth-linux](https://github.com/rolandguelle/razer-blade-stealth-linux)
-
 * [Dracula theme for the term shell](https://github.com/dracula/gnome-terminal)
 
 ## Dev tools
