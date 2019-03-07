@@ -5,5 +5,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+* [ubuntu](./ubuntu)
 * [git & github](./git.md)
 * [IDE](./ide.md)
