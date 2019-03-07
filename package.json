@@ -1,0 +1,6 @@
+{
+  "license": "BSD",
+  "scripts": {
+    "docs": "doctoc readme.md ides/*.md ubuntu/*.md"
+  }
+}
