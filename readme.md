@@ -8,3 +8,4 @@
 * [ubuntu](./ubuntu)
 * [git & github](./git.md)
 * [IDE](./ide.md)
+* [latex](./latex)
