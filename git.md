@@ -185,18 +185,31 @@ which is similar to:
 ```
 but the best is:
 ```
-    git diff --stat --color master..mybranch
+git diff --stat --color master..mybranch
 ```
 And to check the actual differences in a file:
 ```
-    git diff mybranch master -- myfile.cs
+git diff mybranch master -- myfile.cs
 ```
 
 ### Rebase
 
 To see the list of recents commits:
 ```
-    git show-branch mybranch --more=4
+git show-branch mybranch --more=4
+```
+or
+```
+git log --oneline -n=4
+```
+To squash these commits one can simply use
+```
+git reset --soft HEAD~4
+git commit
+```
+Write the commit message and than
+```
+git push --force origin <mybranch>
 ```
 
 ## Dealing with Remotes
