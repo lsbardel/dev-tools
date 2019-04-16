@@ -1,14 +1,39 @@
 {
-    "python.pythonPath": "${workspaceFolder}/venv/bin/python",
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "[javascript]": {
-        "editor.tabSize": 2
-    },
-    "[json]": {
-        "editor.tabSize": 2
-    },
-    "[yaml]": {
-        "editor.tabSize": 2
+  "editor.rulers": [88, 120],
+  "python.pythonPath": "${workspaceFolder}/venv/bin/python",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "markdown-pdf.outputDirectory": "/Users/luca/Documents",
+  "search.exclude": {
+    "**/build": true,
+    "**/static": true,
+    "**/node_modules": true,
+    "**/bower_components": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "cSpell.userWords": ["blockchain", "freemium", "roadmap"],
+  "diffEditor.renderSideBySide": false,
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx",
+    "xml": {
+      "attr_quotes": "single"
     }
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
 }
