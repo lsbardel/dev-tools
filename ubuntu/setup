@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+apt update
+
+## required
+apt install \
+    vim \
+    build-essential \
+    ca-certificates \
+    curl \
+    wget
+
+## developer
+apt install \
+    cloc
