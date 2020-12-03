@@ -13,7 +13,8 @@
 
 ## General
 
-* Run [./ubuntu.sh](./scripts/ubuntu.sh) from this directory
+* Run [./scripts/ubuntu](./scripts/ubuntu) from this directory
+* Install [Oh My Zsh](https://ohmyz.sh/) (check shell type with `ps -p $$`)
 
 ## Javascript
 
@@ -26,7 +27,7 @@
 * Create the ``docker`` group ``sudo groupadd docker``
 * Add your user to the group ``sudo usermod -aG docker $USER``
 
-from [get docker ce for ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/) run the following [docker.sh script](./docker.sh)
+from [get docker ce for ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/) run the following [docker.sh script](./scrips/docker)
 
 ## Minikube
 
