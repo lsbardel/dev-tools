@@ -1,5 +1,6 @@
 .project
 .pydevproject
 *.log
+*.key
 
 node_modules/
