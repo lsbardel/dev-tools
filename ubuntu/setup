@@ -8,8 +8,24 @@ apt install \
     build-essential \
     ca-certificates \
     curl \
-    wget
-
-## developer
-apt install \
+    wget \
     cloc
+
+
+
+## python
+apt install \
+    python-is-python3 \
+    libssl-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    llvm \
+    libncurses5-dev \
+    lzma-dev
+
+
+# for wsl2
+apt install \
+    keychain
