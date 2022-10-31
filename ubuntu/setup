@@ -9,7 +9,8 @@ apt install \
     ca-certificates \
     curl \
     wget \
-    cloc
+    cloc \
+    unzip
 
 
 
